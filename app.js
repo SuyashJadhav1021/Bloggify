@@ -34,7 +34,7 @@ app.use("/api/v1/posts", postsRouter);
 app.use("/api/v1/categories", catRouter);
 app.use(errorHandlerMiddleWare);
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
 
 const start = async () => {
   try {
