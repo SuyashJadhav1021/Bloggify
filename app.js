@@ -9,8 +9,16 @@ const postsRouter = require("./routes/posts");
 const catRouter = require("./routes/categories");
 const errorHandlerMiddleWare = require("./middleware/error-handler");
 const authMiddleware = require("./middleware/authentication");
+const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
+
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
