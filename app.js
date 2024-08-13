@@ -13,7 +13,12 @@ const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
 
-app.use(cors());
+app.use(
+  cors({
+    origin:
+      "https://bloggify-backend-pzqclpt5o-suyashs-projects-bceb91d4.vercel.app",
+  })
+);
 
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
