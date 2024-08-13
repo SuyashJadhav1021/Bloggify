@@ -15,8 +15,7 @@ const path = require("path");
 
 app.use(
   cors({
-    origin:
-      "https://bloggify-backend-pzqclpt5o-suyashs-projects-bceb91d4.vercel.app",
+    origin: "*",
   })
 );
 
